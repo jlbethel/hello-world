@@ -1,0 +1,44 @@
+<?php
+    $returned_array = pingPong(30);
+
+    function pingPong($number) {
+		$array = array();
+
+	    for ($index = 1; $index <= $number; $index += 1); {
+	    	  if ($index % 3 == 0 && $index % 5 == 0) {
+				  	array_push($array, "Ping Pong!");
+			  	} elseif ($index % 3 == 0) {
+				   	array_push($array, "ping");
+			   	} elseif ($index % 5 == 0) {
+				  	array_push($array, "pong");
+				  } else {
+				  	array_push($array, $index);
+			  	}
+          }
+	  	return $array;
+    }
+      var_dump($returned_array);
+?>
+
+/*
+<?php
+    $user_number = 30;
+    $numbers_array = array();
+    
+
+    for ($index = 0; $index <= $user_number; $index += 1) {
+    	if ($index % 3 == 0 && $index % 5 == 0) {
+				array_push($numbers_array, "Ping Pong!");
+			} elseif ($index % 3 == 0) {
+				array_push($numbers_array, "ping");
+			} elseif ($index % 5 == 0) {
+				array_push($numbers_array, "pong");
+			} else {
+				array_push($numbers_array, $index);
+			}
+    }
+    var_dump($numbers_array);
+   
+?>
+*/
+
